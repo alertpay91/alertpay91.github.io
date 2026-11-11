@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mark aplikacije – MarkTube, MarkBook, MarkGram, MarkSync, MarkCam</title>
+<meta name="description" content="Besplatne aplikacije bez reklama: MarkTube (YouTube), MarkBook (Facebook i Messenger), MarkGram (Instagram) za Android, MarkSync i MarkCam za Windows. Free ad-free apps for Android and Windows.">
+<meta property="og:title" content="Mark aplikacije">
+<meta property="og:description" content="MarkTube, MarkBook, MarkGram, MarkSync, MarkCam – besplatno, bez reklama.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alertpay91.github.io/">
+<link rel="canonical" href="https://alertpay91.github.io/">
+<link rel="icon" href="img/marksync.png">
+<style>
+:root {
+  --bg: #f6f7fb; --card: #ffffff; --text: #14161c; --muted: #5b6170; --line: #e3e6ee;
+  --accent: #4f46e5; --accent-text: #ffffff; --soft: #eef0fb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115; --card: #171a21; --text: #eceef3; --muted: #9aa1b2; --line: #262a35;
+    --accent: #6d68ff; --accent-text: #ffffff; --soft: #1f2330;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; overflow-x: hidden; background: var(--bg); color: var(--text);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+header { padding: 40px 0 8px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0; letter-spacing: -0.02em; }
+.lead { color: var(--muted); margin: 10px 0 0; font-size: 17px; max-width: 640px; }
+.lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; flex: none; }
+.lang button {
+  border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 14px;
+  padding: 6px 12px; cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+.sections { display: flex; flex-direction: column; }
+section { padding: 24px 0 8px; }
+h2 { font-size: 20px; margin: 0 0 4px; display: flex; align-items: center; gap: 10px; }
+.sub { color: var(--muted); margin: 0 0 16px; font-size: 15px; }
+.here {
+  font-size: 12px; font-weight: 600; background: var(--soft); color: var(--accent);
+  padding: 2px 8px; border-radius: 999px; display: none;
+}
+section.mine .here { display: inline-block; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 16px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.head { display: flex; gap: 14px; align-items: center; }
+.icon { width: 56px; height: 56px; border-radius: 14px; flex: none; display: block; }
+.name { font-size: 19px; font-weight: 700; margin: 0; }
+.what { color: var(--muted); font-size: 14px; margin: 0; }
+ul { margin: 0; padding-left: 18px; font-size: 15px; }
+li { margin: 2px 0; }
+.actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 600;
+  background: var(--accent); color: var(--accent-text); padding: 10px 16px; border-radius: 12px;
+  font-size: 15px;
+}
+.btn.alt { background: var(--soft); color: var(--text); }
+.meta { color: var(--muted); font-size: 13px; width: 100%; }
+.src { color: var(--muted); font-size: 13px; }
+.src a { color: inherit; }
+.help {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 20px;
+  margin-top: 16px; font-size: 15px;
+}
+.help summary { cursor: pointer; font-weight: 600; }
+.help ol { margin: 10px 0 0; padding-left: 20px; }
+footer { color: var(--muted); font-size: 14px; padding: 32px 0 48px; }
+footer a { color: inherit; }
+[data-en] { display: none; }
+html[lang="en"] [data-sr] { display: none; }
+html[lang="en"] [data-en] { display: revert; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="top">
+      <h1>Mark <span data-sr>aplikacije</span><span data-en>apps</span></h1>
+      <div class="lang" role="group" aria-label="Jezik / Language">
+        <button type="button" data-set="sr" aria-pressed="true">SR</button>
+        <button type="button" data-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+    <p class="lead">
+      <span data-sr>Besplatno, bez reklama i bez praćenja. Izvorni kod je javan na GitHub-u.</span>
+      <span data-en>Free, no ads and no tracking. The source code is public on GitHub.</span>
+    </p>
+  </header>
+
+  <div class="sections">
+    <!-- ===== Android ===== -->
+    <section id="android">
+      <h2><span data-sr>Za Android telefon</span><span data-en>For Android phones</span>
+        <span class="here"><span data-sr>ovaj uređaj</span><span data-en>this device</span></span></h2>
+      <p class="sub">
+        <span data-sr>Ne troše bateriju dok ih ne koristiš. Same jave kad izađe nova verzija.</span>
+        <span data-en>No battery use while you're not using them. They tell you when a new version is out.</span>
+      </p>
+      <div class="grid">
+        <article class="card" data-repo="MarkTube" data-asset="^MarkTube\.apk$">
+          <div class="head">
+            <svg class="icon" viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="gt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6D28D9"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient></defs><rect width="108" height="108" rx="26" fill="url(#gt)"/><path fill="#fff" d="M33,72 L33,36 L42,36 L54,52 L66,36 L75,36 L75,72 L66,72 L66,50 L54,66 L42,50 L42,72 Z"/><path fill="#FDE047" d="M50,74 L50,84 L59,79 Z"/></svg>
+            <div><p class="name">MarkTube</p><p class="what"><span data-sr>YouTube bez reklama</span><span data-en>YouTube without ads</span></p></div>
+          </div>
+          <ul data-sr>
+            <li>Bez reklama, preskače i sponzorske delove</li>
+            <li>Svira u pozadini i sa ugašenim ekranom</li>
+            <li>Sopstveni plejer: upola manje troši bateriju</li>
+            <li>Okreneš telefon i video ide preko celog ekrana</li>
+          </ul>
+          <ul data-en>
+            <li>No ads, also skips sponsor segments</li>
+            <li>Plays in the background and with the screen off</li>
+            <li>Its own video player: half the battery use</li>
+            <li>Turn the phone and the video goes full screen</li>
+          </ul>
+          <div class="actions">
+            <a class="btn dl" href="https://github.com/alertpay91/MarkTube/releases/latest/download/MarkTube.apk"><span data-sr>Preuzmi</span><span data-en>Download</span> APK</a>
+            <span class="meta"></span>
+            <span class="src"><a href="https://github.com/alertpay91/MarkTube">GitHub</a></span>
+          </div>
+        </article>
+
+        <article class="card" data-repo="MarkBook" data-asset="^MarkBook\.apk$">
+          <div class="head">
+            <svg class="icon" viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0D9488"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs><rect width="108" height="108" rx="26" fill="url(#gb)"/><path fill="#fff" d="M33,72 L33,36 L42,36 L54,52 L66,36 L75,36 L75,72 L66,72 L66,50 L54,66 L42,50 L42,72 Z"/><path fill="#FDE047" d="M48,75 h12 a3,3 0 0 1 3,3 v4 a3,3 0 0 1 -3,3 h-7 l-4,3 v-3 h-1 a3,3 0 0 1 -3,-3 v-4 a3,3 0 0 1 3,-3 z"/></svg>
+            <div><p class="name">MarkBook</p><p class="what"><span data-sr>Facebook i Messenger</span><span data-en>Facebook and Messenger</span></p></div>
+          </div>
+          <ul data-sr>
+            <li>Bez reklama i nametnutih predloga</li>
+            <li>Facebook i poruke u jednoj aplikaciji</li>
+            <li>Ne radi u pozadini: ne prazni bateriju</li>
+          </ul>
+          <ul data-en>
+            <li>No ads and no pushed suggestions</li>
+            <li>Facebook and messages in one app</li>
+            <li>Doesn't run in the background: no battery drain</li>
+          </ul>
+          <div class="actions">
+            <a class="btn dl" href="https://github.com/alertpay91/MarkBook/releases/latest/download/MarkBook.apk"><span data-sr>Preuzmi</span><span data-en>Download</span> APK</a>
+            <span class="meta"></span>
+            <span class="src"><a href="https://github.com/alertpay91/MarkBook">GitHub</a></span>
+          </div>
+        </article>
+
+        <article class="card" data-repo="MarkGram" data-asset="^MarkGram\.apk$">
+          <div class="head">
+            <svg class="icon" viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#DB2777"/></linearGradient></defs><rect width="108" height="108" rx="26" fill="url(#gg)"/><path fill="#fff" d="M33,72 L33,36 L42,36 L54,52 L66,36 L75,36 L75,72 L66,72 L66,50 L54,66 L42,50 L42,72 Z"/><path fill="#FDE047" d="M48,75 h12 a3,3 0 0 1 3,3 v4 a3,3 0 0 1 -3,3 h-7 l-4,3 v-3 h-1 a3,3 0 0 1 -3,-3 v-4 a3,3 0 0 1 3,-3 z"/></svg>
+            <div><p class="name">MarkGram</p><p class="what">Instagram</p></div>
+          </div>
+          <ul data-sr>
+            <li>Bez reklama i nametnutih predloga</li>
+            <li>Objave, priče i poruke</li>
+            <li>Ne radi u pozadini: ne prazni bateriju</li>
+          </ul>
+          <ul data-en>
+            <li>No ads and no pushed suggestions</li>
+            <li>Posts, stories and messages</li>
+            <li>Doesn't run in the background: no battery drain</li>
+          </ul>
+          <div class="actions">
+            <a class="btn dl" href="https://github.com/alertpay91/MarkGram/releases/latest/download/MarkGram.apk"><span data-sr>Preuzmi</span><span data-en>Download</span> APK</a>
+            <span class="meta"></span>
+            <span class="src"><a href="https://github.com/alertpay91/MarkGram">GitHub</a></span>
+          </div>
+        </article>
+      </div>
+
+      <details class="help">
+        <summary><span data-sr>Kako se instalira na telefon?</span><span data-en>How do I install it on my phone?</span></summary>
+        <ol data-sr>
+          <li>Otvori ovu stranicu na telefonu i dodirni <b>Preuzmi APK</b>.</li>
+          <li>Otvori preuzeti fajl. Telefon pita da li sme da instalira iz ovog izvora: uključi <b>Dozvoli</b>.</li>
+          <li>Ako Play Protect upozori, izaberi <b>Više detalja → Ipak instaliraj</b>. Aplikacija nije sa Play prodavnice, pa je Google ne poznaje.</li>
+          <li>Nove verzije: kad je aplikacija otvorena, pojavi se traka „Nova verzija“. Dodirneš <b>Ažuriraj</b> i instaliraš je preko stare, a prijava ostaje.</li>
+        </ol>
+        <ol data-en>
+          <li>Open this page on the phone and tap <b>Download APK</b>.</li>
+          <li>Open the downloaded file. The phone asks whether this source may install apps: turn on <b>Allow</b>.</li>
+          <li>If Play Protect warns you, choose <b>More details → Install anyway</b>. The app isn't from the Play Store, so Google doesn't know it.</li>
+          <li>Updates: while the app is open, a "New version" bar appears. Tap <b>Update</b> and install it over the old one; you stay logged in.</li>
+        </ol>
+        <p class="src" data-sr>Potreban je Android telefon iz poslednjih nekoliko godina (64-bitni).</p>
+        <p class="src" data-en>Needs an Android phone from the last few years (64-bit).</p>
+      </details>
+    </section>
+
+    <!-- ===== Windows ===== -->
+    <section id="windows">
+      <h2><span data-sr>Za računar</span><span data-en>For computers</span>
+        <span class="here"><span data-sr>ovaj uređaj</span><span data-en>this device</span></span></h2>
+      <p class="sub">Windows 10 / 11<span data-sr> (MarkCam i Linux)</span><span data-en> (MarkCam also Linux)</span></p>
+      <div class="grid">
+        <article class="card" data-repo="MarkSync" data-asset="^MarkSync-Setup-.*\.exe$">
+          <div class="head">
+            <img class="icon" src="img/marksync.png" alt="" width="56" height="56">
+            <div><p class="name">MarkSync</p><p class="what"><span data-sr>Slike i snimci: računar, telefon, disk</span><span data-en>Photos and videos: PC, phone, disk</span></p></div>
+          </div>
+          <ul data-sr>
+            <li>Poredi po sadržaju i kopira samo ono što nedostaje</li>
+            <li>Sređuje po datumu, mestu ili albumima</li>
+            <li>Nalazi i uklanja duplikate</li>
+            <li>Svaka kopija se proverava, sve može da se poništi</li>
+          </ul>
+          <ul data-en>
+            <li>Compares by content and copies only what's missing</li>
+            <li>Organizes by date, place or album</li>
+            <li>Finds and removes duplicates</li>
+            <li>Every copy is verified, everything can be undone</li>
+          </ul>
+          <div class="actions">
+            <a class="btn dl" href="https://github.com/alertpay91/MarkSync/releases/latest"><span data-sr>Preuzmi za</span><span data-en>Download for</span> Windows</a>
+            <a class="btn alt" data-alt="^MarkSync-.*-portable\.exe$" href="https://github.com/alertpay91/MarkSync/releases/latest" hidden><span data-sr>Bez instalacije</span><span data-en>Portable</span></a>
+            <span class="meta"></span>
+            <span class="src"><a href="https://github.com/alertpay91/MarkSync">GitHub</a></span>
+          </div>
+        </article>
+
+        <article class="card" data-repo="MarkCam" data-asset="^MarkCam-Setup-.*\.exe$">
+          <div class="head">
+            <img class="icon" src="img/markcam.png" alt="" width="56" height="56">
+            <div><p class="name">MarkCam</p><p class="what"><span data-sr>Kamera sa efektima za online časove</span><span data-en>Camera with effects for online classes</span></p></div>
+          </div>
+          <ul data-sr>
+            <li>Radi u ClassIn-u, Zoom-u, Teams-u</li>
+            <li>Maske, reakcije i efekti koji prate lice</li>
+            <li>Natpis sa imenom, rečenice za čas (EN + 中文)</li>
+            <li>Virtuelna pozadina i čišćenje buke iz mikrofona</li>
+          </ul>
+          <ul data-en>
+            <li>Works in ClassIn, Zoom, Teams</li>
+            <li>Masks, reactions and effects that follow your face</li>
+            <li>Name banners, classroom phrases (EN + 中文)</li>
+            <li>Virtual background and microphone noise removal</li>
+          </ul>
+          <div class="actions">
+            <a class="btn dl" href="https://github.com/alertpay91/MarkCam/releases/latest"><span data-sr>Preuzmi za</span><span data-en>Download for</span> Windows</a>
+            <a class="btn alt" data-alt="^markcam_.*_amd64\.deb$" href="https://github.com/alertpay91/MarkCam/releases/latest" hidden>Linux (.deb)</a>
+            <span class="meta"></span>
+            <span class="src"><a href="https://github.com/alertpay91/MarkCam">GitHub</a></span>
+          </div>
+        </article>
+      </div>
+
+      <details class="help">
+        <summary><span data-sr>Windows kaže „nepoznat izdavač“?</span><span data-en>Windows says "unknown publisher"?</span></summary>
+        <ol data-sr>
+          <li>Programi nisu kupili Microsoft-ov potpis, pa ih Windows ne poznaje.</li>
+          <li>Klikni <b>Više informacija → Ipak pokreni</b> (More info → Run anyway).</li>
+        </ol>
+        <ol data-en>
+          <li>The programs don't have a paid Microsoft signature, so Windows doesn't know them.</li>
+          <li>Click <b>More info → Run anyway</b>.</li>
+        </ol>
+      </details>
+    </section>
+  </div>
+
+  <footer>
+    <span data-sr>Napravio Marko. Aplikacije su nezvanične i nisu povezane sa YouTube-om, Facebook-om ni Instagram-om.</span>
+    <span data-en>Made by Marko. The apps are unofficial and not affiliated with YouTube, Facebook or Instagram.</span>
+    · <a href="https://github.com/alertpay91">github.com/alertpay91</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  // Language: remembered on this device, English for non-Serbian browsers.
+  var html = document.documentElement;
+  function setLang(l) {
+    html.lang = l;
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.set === l));
+    });
+    try { localStorage.setItem("lang", l); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  var nav = (navigator.language || "").toLowerCase();
+  setLang(saved || (/^(sr|hr|bs|sh|cnr|mk|sl)/.test(nav) ? "sr" : "en"));
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.dataset.set); });
+  });
+
+  // The visitor's own device first.
+  var android = /Android/i.test(navigator.userAgent);
+  var mine = document.getElementById(android ? "android" : "windows");
+  mine.classList.add("mine");
+  mine.parentNode.insertBefore(mine, mine.parentNode.firstChild);
+
+  // Newest version, date and size; buttons point straight at the file.
+  function mb(n) { return Math.round(n / 1048576) + " MB"; }
+  document.querySelectorAll(".card[data-repo]").forEach(function (card) {
+    var repo = card.dataset.repo;
+    fetch("https://api.github.com/repos/alertpay91/" + repo + "/releases/latest")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rel) {
+        if (!rel || !rel.assets) return;
+        var main = rel.assets.find(function (a) { return new RegExp(card.dataset.asset).test(a.name); });
+        if (main) card.querySelector(".dl").href = main.browser_download_url;
+        card.querySelectorAll("[data-alt]").forEach(function (b) {
+          var a = rel.assets.find(function (x) { return new RegExp(b.dataset.alt).test(x.name); });
+          if (a) { b.href = a.browser_download_url; b.hidden = false; }
+        });
+        var v = (rel.tag_name || "").replace(/^v/, "");
+        var d = new Date(rel.published_at);
+        card.querySelector(".meta").textContent = "v" + v + " · " + d.toLocaleDateString(html.lang === "sr" ? "sr-Latn" : "en-GB")
+          + (main ? " · " + mb(main.size) : "");
+      })
+      .catch(function () {});
+  });
+})();
+</script>
+</body>
+</html>
